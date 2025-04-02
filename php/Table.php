@@ -79,7 +79,7 @@ abstract class Table
         $vt_npos = $this->bb->followSOffset($this->bb_pos);
         $vt_len_voffset = $this->bb->getVOffset($vt_npos);
         return $vt_f_voffset < $vt_len_voffset ?
-            $this->bb->getVOffset(Constants::asVOffset($vt_npos + $vt_f_voffset)) :
+            $this->bb->getVOffset(Constants::asNPos($vt_npos + $vt_f_voffset)) :
             0;
     }
 
